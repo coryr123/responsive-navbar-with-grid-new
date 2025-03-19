@@ -145,6 +145,13 @@
             color: var(--umbc-white);
             transition: color .2s ease-in-out, background-color .2s ease-in-out;
         }
+
+        .search-toggle {
+            color: var(--umbc-white);
+            display: none;
+            font-size: 1.25rem;
+        }
+
         .avatar {
             border-radius: 50%;
             height: 40px;
@@ -252,6 +259,16 @@
             .search-bar {
                 display: none;
             }
+            .search-toggle {
+                display: block;
+            }
+            .search-container {
+                justify-content: center;
+                width: 25px;
+            }
+            .search-container:focus-within {
+                max-width: 25px;
+            }
         }
 
         @media (width <=612px) {
@@ -294,7 +311,10 @@
         <div class="navbar-links nav-grid-item nav-link-3"><a href="#">Contact</a></div>
         <div class="nav-grid-item search">
             <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search">
+                <a href="#" class="search-toggle">
+                    <i class="bi bi-search"></i>
+                </a>
+                <input type="text" class="search-bar" placeholder="Search">
             </div>
         </div>
         <div class="nav-grid-item offcanvas-btn">
